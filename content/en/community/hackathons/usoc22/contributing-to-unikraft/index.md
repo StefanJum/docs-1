@@ -98,7 +98,9 @@ weigth: 50
 
 ### 14. Give Us Feedback
 
-{{< readfile file="/community/hackathons/sessions/contributing-to-unikraft/content/Practical-Work_14.-Give-Us-Feedback.md" markdown="true" >}}
+We want to know how to make the next sessions better.
+For this we need your [feedback](https://forms.gle/LyiK2UrnuQu3U6j79).
+Thank you!
 
 ## Further Reading
 
