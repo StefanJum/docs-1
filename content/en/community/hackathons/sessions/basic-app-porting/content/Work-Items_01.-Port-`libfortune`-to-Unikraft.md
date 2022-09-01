@@ -1,4 +1,5 @@
-(Uni)kernel developers often seek guidance from elders, lost `man` pages, wizards, source code comments and occasionally swear by the reproducible environment.  But the unfortunate truth is that "bitshifts happen," and we cannot always [leverage guidance from mysterious forces](https://www.ggbuddy.com/img/post/oymiswgv/midgvf/3245543291_ac5d471739d22f258621e4e7cbdcb98f_309e11564f795_m.jpg).
+(Uni)kernel developers often seek guidance from elders, lost `man` pages, wizards, source code comments and occasionally swear by the reproducible environment.
+But the unfortunate truth is that `bitshifts happen` and we cannot always [leverage guidance from mysterious forces](https://www.ggbuddy.com/img/post/oymiswgv/midgvf/3245543291_ac5d471739d22f258621e4e7cbdcb98f_309e11564f795_m.jpg).
 
 A shared library called [`libfortune`](https://github.com/nderjung/libfortune) can offer solace in such times, providing much needed guidance to those who find themselves in the position of requiring fast boot times and secure memory isolation of an application.
 This library is no joke, it will save us all.
@@ -30,4 +31,3 @@ oOo oOO| | | | |   (| | | (_) |  _) :_
 "It always seems impossible until it is done."
         -- Nelson Mandela
 ```
-

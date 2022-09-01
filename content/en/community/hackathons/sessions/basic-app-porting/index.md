@@ -4,7 +4,7 @@ linkTitle: "08. Basic App Porting"
 weigth: 80
 ---
 
-## Reminders
+## Requirements and Reminders
 
 ### Configuring, Building and Running Unikraft
 

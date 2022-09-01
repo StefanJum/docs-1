@@ -9,8 +9,8 @@ To do this, we create a parallel application which uses both the library we are 
    $ kraft init iperf3
    ```
 
-2. We will now have a "empty" initialized project;
-   you'll find boilerplate in this directory, including a `kraft.yaml` file which will look something like this:
+2. We will now have a `empty` initialized project.
+   You'll find boilerplate in this directory, including a `kraft.yaml` file which will look something like this:
 
    ```bash
    $ cd ~/workspace/apps/iperf3

@@ -1,5 +1,5 @@
-The scope of this tutorial only covers how to bring an application to Unikraft "from first principles";
-that is, before you use Unikraft, you can access the source files of the application and compile the application natively for Linux user space.
+The scope of this tutorial only covers how to bring an application to Unikraft `from first principles`.
+Before you use Unikraft, you can access the source files of the application and compile the application natively for Linux user space.
 You wish to compile this application against the Unikraft core and any auxiliary necessary third-party libraries in order to make it a unikernel.
 Classic examples of these types of applications are open-source ones, such as NGINX, Redis, etc.
 Of course, you can work with code which is not open-source, but again, you must be able to access the source files and the build system before you can begin.
@@ -19,5 +19,4 @@ However, if the language you wish to run is interpreted and not yet available on
 **Note:** In the case of higher-level languages which are interpreted, you do not need to follow this tutorial.
 Instead, simply mount the application code with the relevant Unikernel binary.
 For example, mounting a directory with python code to the python Unikraft unikernel.
-Please review [Session 04: Complex Applications](/docs/sessions/04-complex-applications/index.md) for more information on this topic.
-
+Please review [Session 04: Complex Applications](/community/hackathons/usoc22/complex-applications/) for more information on this topic.
