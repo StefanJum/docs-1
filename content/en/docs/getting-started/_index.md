@@ -37,10 +37,62 @@ apt-get install -y --no-install-recommends \
   unzip \
   uuid-runtime \
   python3 \
-  python3-setuptools
+  python3-setuptools \
+  python3-pip \
+  qemu-kvm \
+  qemu-system-x86 \
+  sgabios
 ```
 
-To install kraft simply run:
+### Arch Linux, Manjaro and other Pacman-based distributions
+
+Please run the following command to install the requirements:
+
+```shell-script
+pacman -Sy base-devel \
+  ncurses \
+  libyaml \
+  flex \
+  git \
+  wget \
+  socat \
+  bison \
+  unzip \
+  python \
+  python-setuptools \
+  python-pip \
+  qemu-system-x86
+```
+
+### Fedora and other dnf-based distributions
+
+Please run the following command to install the requirements:
+
+```shell-script
+dnf install -y \
+  @development-tools \
+  ncurses-devel \
+  libyaml \
+  flex \
+  git \
+  wget \
+  socat \
+  bison \
+  unzip \
+  libuuid \
+  python3 \
+  python3-setuptools \
+  python3-pip \
+  qemu-kvm \
+  qemu-system-x86 \
+  sgabios
+```
+
+**Note: Since on Fedora the default `yacc` is [`Berkeley Yacc`](https://en.wikipedia.org/wiki/Berkeley_Yacc), not [`GNU Bison`](https://www.gnu.org/software/bison/), you will need to manually set the `YACC` env variable `export YACC=/usr/bin/bison`.**
+
+### Install kraft using `pip3`
+
+To then install kraft simply run:
 
 ```bash
 pip3 install git+https://github.com/unikraft/kraft.git
@@ -116,11 +168,11 @@ Thank you!
 To manually set up the build environment for the [helloworld app](https://github.com/unikraft/app-helloworld), we first have to create a specific directory structure:
 
 ```text
- my-unikernel
-      ├────apps
-      │      └─app-helloworld     <- helloworld application
-      ├─── libs                   <- additional libraries go here
-      └─── unikraft               <- Unikraft core
+my-unikernel
+	|-- apps
+	|   `-- app-helloworld
+	|-- libs
+	`-- unikraft
 ```
 
 We can do this by executing the following sequence of commands:
@@ -136,7 +188,7 @@ git clone https://github.com/unikraft/app-helloworld
 cd app-helloworld
 ```
 
-All following configuration and build operations are done from within the helloworld application folder.
+All following configuration and build operations are done from within the `helloworld` application folder.
 Notice that it already contains a `Makefile` that looks like this:
 
 ```Makefile
