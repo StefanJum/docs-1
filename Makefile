@@ -58,10 +58,12 @@ all:
 
 .PHONY: container
 container: DOCKER_BUILD_EXTRA ?=
+container: GO_ARCH ?= amd64
 container: TAG ?= devenv
 container: TARGET ?= devenv
 container:
 	$(DOCKER) build \
+		--build-arg GO_ARCH=$(GO_ARCH) \
 		--file $(WORKDIR)/Dockerfile \
 		--target $(TARGET) \
 		--tag $(IMAGE):$(TAG) \
@@ -75,3 +77,20 @@ devenv:
 		--volume $(WORKDIR):/usr/src/docs \
 		--entrypoint bash \
 		$(IMAGE):devenv
+
+.PHONY: serve
+serve: HOST ?= localhost
+serve:
+	$(HUGO) \
+		serve \
+		--verbose \
+		--debug \
+		--bind 0.0.0.0 \
+		-p $(PORT) \
+		-b http://$(HOST):$(PORT) \
+		--templateMetrics \
+		--templateMetricsHints \
+		--printMemoryUsage \
+		--verbose \
+		--disableLiveReload \
+		--enableGitInfo

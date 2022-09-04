@@ -6,9 +6,9 @@ draft: false
 landing:
   quickStart: Quick Start
   notify:
-    pill: What's New
-    text: Security paper & tutorial at ASPLOS'22
-    link: /blog/2022-02-17-unikraft-at-asplos22
+    pill: New release
+    text: v0.10.0 (Phoebe) is out!
+    link: /blog/2022-08-20-unikraft-releases-phoebe
   viewOnGithub: View on GitHub
   whatsAUnikraft: What's a unikernel?
   leading: Unikraft is a fast, secure and open-source Unikernel Development Kit
