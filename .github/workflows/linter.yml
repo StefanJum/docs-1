@@ -25,3 +25,18 @@ jobs:
           MARKDOWN_CUSTOM_RULE_GLOBS: rules/rules.js
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  language-tool:
+    name: Language Tool
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run LanguageTool
+        uses: reviewdog/action-languagetool@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: warning
+          language: "en-US"
